@@ -1,0 +1,67 @@
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+body { margin: 0; display: flex; justify-content: center; min-height: 100vh; padding-top: 40px; }
+
+.container { width: 100%; max-width: 600px; padding: 20px; }
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  display: flex; flex-direction: column; gap: 20px;
+}
+
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+h1 { margin: 0; font-size: 1.5rem; font-weight: 800; color: #0f172a; }
+
+.status-badge span { font-size: 0.8rem; font-weight: 600; padding: 4px 10px; border-radius: 20px; }
+.ready { background: #dcfce7; color: #166534; }
+.loading { background: #fff7ed; color: #c2410c; }
+
+textarea {
+  width: 100%; height: 120px; padding: 15px;
+  border: 2px solid #e2e8f0; border-radius: 12px;
+  font-size: 1rem; resize: none; font-family: inherit;
+  box-sizing: border-box; /* Fix padding issues */
+}
+textarea:focus { outline: none; border-color: #3b82f6; }
+
+.controls { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.select-wrapper { display: flex; flex-direction: column; gap: 8px; }
+label { font-size: 0.8rem; font-weight: 700; color: #64748b; text-transform: uppercase; }
+
+select, input {
+  padding: 12px; border: 2px solid #e2e8f0; border-radius: 10px; background: white; width: 100%; box-sizing: border-box;
+}
+
+.generate-btn {
+  background: #3b82f6; color: white; border: none; padding: 16px;
+  border-radius: 12px; font-weight: 700; font-size: 1rem;
+  cursor: pointer; display: flex; justify-content: center; align-items: center; gap: 8px;
+  transition: background 0.2s;
+}
+.generate-btn:hover { background: #2563eb; }
+.generate-btn:disabled { background: #cbd5e1; cursor: not-allowed; }
+
+.player-box {
+  background: #f8fafc; border-radius: 12px; padding: 20px;
+  display: flex; align-items: center; justify-content: space-between;
+  min-height: 60px; border: 1px dashed #cbd5e1;
+}
+
+.play-btn {
+  width: 50px; height: 50px; border-radius: 50%; background: #3b82f6;
+  border: none; color: white; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
+}
+.download-link {
+  text-decoration: none; color: #64748b; font-size: 0.9rem; font-weight: 600;
+  display: flex; gap: 5px; align-items: center;
+}
+.placeholder { color: #94a3b8; font-size: 0.9rem; margin: 0 auto; }
+.spin { animation: spin 1s linear infinite; }
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
